@@ -1,0 +1,29 @@
+n=800
+a=2
+b=1
+
+##### alpha=a e beta=b ##### função densidade f(x) ####
+
+set.seed(2019)
+x=c(1:n)
+x
+u=runif(n)
+x = -b / log(-exp(log((1 - u)) / a) + 0.1e1)
+x
+hist(x)
+
+
+##### alpha=c e beta=d #### função de risco h(y) ####
+m=100
+c=2
+d=1
+
+set.seed(2019)
+y=c(1:m)
+y
+u=runif(m)
+
+
+y = a * b * exp(-b / y) / y ^ 2 / (0.1e1 - exp(-b / y))
+hist(y)
+
